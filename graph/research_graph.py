@@ -24,7 +24,7 @@ def build_graph():
 
     def generate_draft(state: ResearchState) -> ResearchState:
         answer = drafter.invoke({"input": state.research})
-        print("📝 Drafted Answer:\n", answer)
+        print("Drafted Answer:\n", answer)
         return state.copy(update={"final_answer": answer})
 
 
