@@ -6,31 +6,31 @@ load_dotenv()
 
 def run_system():
     graph = build_graph()  # Build once
-    cache = {}  # 🔁 Cache to store previously answered questions
+    cache = {}  # Cache to store previously answered questions
 
     while True:
-        raw_input = input("🔍 Enter your research question (or type 'exit' to quit): ")
+        raw_input = input("Enter your research question (or type 'exit' to quit): ")
         question = raw_input.strip()
 
         if question.lower() in {"exit", "quit"}:
             print("👋 Exiting the system. Goodbye!")
             break
 
-        # ✅ Check cache first
+        # Check cache first
         if question in cache:
-            print("⚡ Cached Result:\n")
-            print("📝 Final Answer:\n", cache[question])
+            print("Cached Result:\n")
+            print("Final Answer:\n", cache[question])
             continue
 
-        # ⏳ Time the operation
+        # Time the operation
         import time
         start = time.time()
 
         result = graph.invoke({"question": question})
         answer = result["final_answer"]
-        print("📝 Final Answer:\n", answer)
+        print("Final Answer:\n", answer)
 
-        # 💾 Save to cache
+        # Save to cache
         cache[question] = answer
 
 
