@@ -3,7 +3,7 @@ from langchain.agents import Tool, initialize_agent, AgentType
 from shared_llm import llm
 import concurrent.futures
 
-# ⛑️ Safe wrapper for Tavily
+# Safe wrapper for Tavily
 def safe_tavily_search(query, timeout=10):
     search = TavilySearchResults()
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -11,7 +11,7 @@ def safe_tavily_search(query, timeout=10):
         try:
             return future.result(timeout=timeout)
         except concurrent.futures.TimeoutError:
-            return "⚠️ Tavily search timed out."
+            return "Tavily search timed out."
 
 def researcher_agent():
     tools = [
