@@ -24,3 +24,69 @@ The Deep Research Chatbot is an AI-powered assistant designed to streamline and 
    ```bash
    git clone https://github.com/your-username/Deep_Research_chatbot.git
    cd Deep_Research_chatbot
+Create a virtual environment
+
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+Install dependencies
+
+bash
+Copy
+Edit
+pip install --upgrade pip
+pip install python-dotenv llama-cpp-python langchain langchain-community langgraph pydantic
+Configuration
+Environment Variables (optional):
+
+Create a .env file at the project root to store API keys or other configuration values:
+
+ini
+Copy
+Edit
+# .env
+TAVILY_API_KEY=your_tavily_api_key
+Model Path:
+
+Open shared_llm.py and update the model_path parameter to point to your downloaded GGUF model file.
+
+Usage
+Run the chatbot via the command line:
+
+bash
+Copy
+Edit
+python main.py
+Enter your research question when prompted.
+
+Type exit or quit to end the session.
+
+Project Structure
+text
+Copy
+Edit
+Deep_Research_chatbot-main/
+├── agents/
+│   ├── drafter.py          # Prompt template for draft generation
+│   └── research.py         # Research agent setup and tool integration
+├── graph/
+│   └── research_graph.py   # StateGraph definition for the research workflow
+├── shared_llm.py           # LLM configuration using LlamaCpp
+├── main.py                 # Entry point and CLI loop
+└── README.md               # Project overview and instructions
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for:
+
+Bug fixes and enhancements
+
+New research tools or agents
+
+Documentation improvements
+
+License
+This project is released under the MIT License.
+
+Copy
+Edit
