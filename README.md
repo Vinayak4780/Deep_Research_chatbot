@@ -31,6 +31,7 @@ The Deep Research Chatbot is an AI-powered assistant designed to streamline and 
    source venv/bin/activate   # On Windows: venv\Scripts\activate
    Install dependencies
 
+3. **Install dependencies**
    ```bash
 
    pip install --upgrade pip
