@@ -54,21 +54,21 @@ The Deep Research Chatbot is an AI-powered assistant designed to streamline and 
      2. Type exit or quit to end the session.
 
 6. **Project Structure**
-
-```Deep_Research_chatbot-main/
-   ├── agents/
-   │   ├── drafter.py          # Prompt template for draft generation
-   │   └── research.py         # Research agent setup and tool integration
-   ├── graph/
-   │   └── research_graph.py   # StateGraph definition for the research workflow
-   ├── shared_llm.py           # LLM configuration using LlamaCpp
-   ├── main.py                 # Entry point and CLI loop
-   └── README.md               # Project overview and instructions
+   ```
+      Deep_Research_chatbot-main/
+      ├── agents/
+      │   ├── drafter.py          # Prompt template for draft generation
+      │   └── research.py         # Research agent setup and tool integration
+      ├── graph/
+      │   └── research_graph.py   # StateGraph definition for the research workflow
+      ├── shared_llm.py           # LLM configuration using LlamaCpp
+      ├── main.py                 # Entry point and CLI loop
+      └── README.md               # Project overview and instructions
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for:
 
-Bug fixes and enhancements
+ 1. Bug fixes and enhancements
 
-New research tools or agents
+ 2. New research tools or agents
 
-Documentation improvements
+ 3. Documentation improvements
