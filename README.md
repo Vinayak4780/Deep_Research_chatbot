@@ -24,20 +24,17 @@ The Deep Research Chatbot is an AI-powered assistant designed to streamline and 
    ```bash
    git clone https://github.com/your-username/Deep_Research_chatbot.git
    cd Deep_Research_chatbot
-Create a virtual environment
+2. **Create a virtual environment**
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install dependencies
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   Install dependencies
 
-bash
-Copy
-Edit
-pip install --upgrade pip
-pip install python-dotenv llama-cpp-python langchain langchain-community langgraph pydantic
+   ```bash
+
+   pip install --upgrade pip
+   pip install python-dotenv llama-cpp-python langchain langchain-community langgraph pydantic
 Configuration
 Environment Variables (optional):
 
